@@ -1,0 +1,22 @@
+
+
+<nav class="navbar navbar-dark" style="background-color: #97ce9c;" *ngIf="!loginPage">
+  <a class="nav-item nav-link" routerLink="/home">Home</a>
+  <a class="nav-item nav-link" routerLink="/current-games">My Games</a>
+  <a class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      New Game
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" routerLink="/new-game">Start New Game</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" routerLink="/join-game">Join New Game</a>
+    </div>
+  </a>
+  <a class="nav-item nav-link" routerLink="/tutorials">Tutorials</a>
+  <a class="nav-item nav-link" (click)="logout()">Logout</a>
+
+</nav>
+<div class="container-fluid" >
+  <router-outlet></router-outlet>
+</div>
